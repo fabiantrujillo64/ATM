@@ -1,8 +1,5 @@
 package ATMProject;
 
-import javax.swing.*;
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -163,6 +160,7 @@ public class GUIProject {
   public void actionPerformed(ActionEvent e) {
    // TODO Auto-generated method stub
    JOptionPane.showMessageDialog(ATM, "Program created by:\nFabian Trujillo and Jayden Abril\nComputer Science Principles 2017-2018\nInstructor: Justin Landfried");
+   System.out.println("User clicked on About");
   }
   
  }
@@ -174,6 +172,7 @@ public class GUIProject {
    // TODO Auto-generated method stub
    JOptionPane.showMessageDialog(ATM, "To check your current balance, click the 'Check Balance' button.\nTo deposit money to your account, click the"
      + "'Deposit' button.\nTo withdraw money, click the 'Withdraw' button.");
+   System.out.println("User clicked on Help");
   }
   
  }
@@ -246,7 +245,7 @@ public class GUIProject {
  private void deposit() {
     String UserInput_2 = JOptionPane.showInputDialog(null,"Enter Amount to Deposit:");
     int input_2 = Integer.valueOf(UserInput_2);
-    if(input_2 < amount){
+    if(input_2 < 0){
       JOptionPane.showMessageDialog(null,
     "Please enter a positive integer.",
     "Transaction Error",
